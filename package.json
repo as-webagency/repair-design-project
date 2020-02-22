@@ -1,0 +1,25 @@
+{
+  "name": "repair-design-project",
+  "version": "1.0.0",
+  "description": "Лендинг - \"Турецкий ремонт в Ростове-на-Дону\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/as-webagency/repair-design-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/as-webagency/repair-design-project/issues"
+  },
+  "homepage": "https://github.com/as-webagency/repair-design-project#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.7"
+  }
+}
