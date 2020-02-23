@@ -1,14 +1,19 @@
 'use strict';
 
-const gulp = require('gulp'),
+const {src, dest, watch} = require('gulp'),
     browserSync = require('browser-sync').create();
 
 // Static server
-gulp.task('browser-sync', function() {
+function bs() {
     browserSync.init({
         server: {
             baseDir: "./src/"
         }
     });
-    gulp.watch("./src/*.html").on('change', browserSync.reload);
-});
+    watch("./src/*.html").on('change', browserSync.reload);
+    watch("./src/*.html").on('change', browserSync.reload);
+    watch("./src/js/*.js").on('change', browserSync.reload);
+}
+
+
+exports.serve = bs;

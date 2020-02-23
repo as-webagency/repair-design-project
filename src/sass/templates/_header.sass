@@ -1,0 +1,41 @@
+.header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 5
+    padding-top: 83px
+    background-color: $dark
+    padding: 23px 0
+.menu
+    justify-content: space-between 
+    &__content
+        max-width: 1257px
+.logo    
+    font-family: 'FuturaDemiC', sans-serif
+    text-transform: uppercase
+    display: inline-block
+    &--primary
+        color: $primary
+.nav
+    &__item
+        font-family: 'FuturaBookC', sans-serif
+        color: $light
+        text-transform: uppercase
+        margin-right: 40px
+        transition: .4s
+        display: inline-block
+        &:hover
+            color: $primary
+        &:last-child
+            margin-right: 0
+.phone
+    &--primary
+        color: $primary 
+        &:hover
+            color: $light   
+.contacts
+    &__phone
+        margin-right: 42px   
+    &__button
+        height: 37px                 

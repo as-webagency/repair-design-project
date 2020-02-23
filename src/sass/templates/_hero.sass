@@ -1,0 +1,93 @@
+.hero
+    &__bg
+        background: $dark url('../img/hero.jpg') center/cover no-repeat
+        height: 100vh
+        color: $light
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: rgba($black, .7)
+    &__content
+        position: relative
+        max-width: 500px
+    &__instagram
+        position: absolute
+        top: 0
+        left: 0
+        max-width: 82px
+        height: 100%
+    &__scroll
+        position: absolute
+        left: 0
+        bottom: 0
+        background-color: $dark
+        min-width: 247px
+        height: 97px
+    &__title
+        margin: 0 0 19px
+        span
+            color: $primary
+    &__text
+        font-family: 'FuturaBookC', sans-serif 
+        font-size: 22px
+        line-height: 30px
+        color: $light
+        margin: 0 0 41px
+    &__button
+        margin-right: 20px
+        height: 51px
+        min-width: 207px
+.scroll-dowm
+    line-height: 97px
+    display: flex
+    align-items: center
+    justify-content: center   
+    font-size: 12px
+    text-transform: uppercase
+    color: $light
+    font-family: 'Yeseva One', sans-serif
+    transition: .4s
+    &:hover
+        color: $primary 
+    &__link
+        position: relative
+        &::after
+            content: ''
+            background: url('../img/arrow_down.svg') center no-repeat
+            width: 29px
+            height: 29px
+            border: 1.5px solid $primary
+            border-radius: 50%
+            position: absolute
+            top: 34px
+            right: 31px
+.instagram
+    background-color: $dark
+    display: flex
+    align-items: center
+    justify-content: center
+    &__link
+        font-family: 'FuturaDemiC', sans-serif
+        color: $primary
+        text-transform: uppercase
+        transform: rotate(90deg)
+        transition: .4s
+        position: relative
+        &:hover
+            color: $light
+        &::after
+            content: ''
+            position: absolute
+            top: -18px
+            right: -50px
+            border: 1.5px solid $primary
+            height: 51px
+            transform: rotate(90deg)        
