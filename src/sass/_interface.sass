@@ -1,7 +1,6 @@
 .phone
     font-family: 'FuturaDemiC', sans-serif
     transition: .4s
-    text-decoration-line: underline
 .button
     font-family: 'FuturaDemiC', sans-serif
     font-size: 13px
@@ -27,10 +26,40 @@
             background-color: $primary
             border: 1px solid $primary
 .title
-    font-family: 'Yeseva One', sans-serif
+    font-family: 'Yeseva One', cursive
     font-weight: 400
     margin: 0
     text-transform: uppercase
     font-size: 40px
-    line-height: 44px
+    line-height: 54px
     color: $light            
+.section
+    &-title
+        &__heading
+            font-family: 'Yeseva One', cursive
+            font-weight: normal
+            text-align: center
+            text-transform: uppercase
+            font-size: 20px    
+        &__image
+            text-align: center
+            &::before,
+            &::after
+                content: ''
+                display: inline-block
+                vertical-align: text-top
+                border-radius: 30px
+                width: 32px
+                height: 1.54px
+                background-color: $primary
+                margin: 0 9px
+.label
+    font-family: 'FuturaBookC', sans-serif
+    font-size: 15px
+    &--light
+        color: rgba($light, .5)   
+.input
+    font-family: 'FuturaMediumC', sans-serif
+    font-size: 18px
+    &--light
+        color: $light      
