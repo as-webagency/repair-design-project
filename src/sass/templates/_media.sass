@@ -2,6 +2,9 @@
     .hero
         .container
             max-width: 1100px
+@media (max-width: 1240px) 
+    .col
+        flex-basis: 31%
 @media (max-width: 1200px) 
     .header
         .container
@@ -25,12 +28,99 @@
     .hero
         &__instagram
             display: none
-@media (max-width: 768px)    
+    .row
+        flex-direction: column
+        align-items: center
+    .types
+        &__card
+            margin-bottom: 79px
+    .card
+        &__text
+            margin: -100px 0 0
+    .projects 
+        .section-title
+            &__heading
+                margin: 0 0 22px
+                &--primary
+                    text-align: center
+            &__word
+                justify-content: center
+                &::after
+                    display: none
+            &__description
+                &--left
+                    text-align: center
+                    margin: 0 auto 36px
+        &__towns 
+            .col-50
+                margin-left: 0
+    .swiper
+        &-container
+            margin-top: 440px
+        &-slide
+            &__image
+                max-height: none
+                height: auto
+                max-width: 100%
+            &__text
+                flex-basis: 45%
+        &-pagination
+            left: 50% !important
+            transform: translateX(-50%)
+        &-button
+            &-next
+                left: auto !important
+                right: 10%
+            &-prev
+                left: 10%
+    .col-50
+        &:last-child 
+            .swiper
+                &-container
+                    margin-top: -662px
+@media (max-width: 900px)
+    .swiper
+        &-container
+            margin-top: 380px
+    .col-50
+        &:last-child 
+            .swiper
+                &-container
+                    margin-top: -600px
+@media (max-width: 768px)   
+    .projects
+        padding: 36px 0 355px
+        &__dark
+            margin-top: 0
+            &::before
+                display: none 
+        .section-title
+            &__heading
+                font-size: 22px
+                line-height: 138.6%
+            &__description
+                font-size: 14px
+                line-height: 23px
+                max-width: 300px
+    .swiper
+        &-container
+            margin-top: 480px
+        &-slide
+            padding-bottom: 37px
+    .col-50
+        width: 75%
+        &:last-child 
+            .swiper
+                &-container
+                    margin-top: -680px
     .hero
         &__content
             margin: 0 auto
         &__scroll
             display: none
+        &__bg
+            &::after
+                display: none
     .contacts
         &__button
             display: none
@@ -40,7 +130,39 @@
         &--primary
             color: $light
             border-bottom: none
-@media (max-width: 500px)                    
+@media (max-width: 680px) 
+    .swiper
+        &-container
+            margin-top: 430px
+    .col-50
+        &:last-child 
+            .swiper
+                &-container
+                    margin-top: -630px                   
+@media (max-width: 600px)  
+    .swiper
+        &-container
+            margin-top: 360px
+        &-slide
+            &__title,
+            &__value
+                font-size: 14px
+            &__text
+                flex-basis: 50%
+    .col-50
+        &:last-child 
+            .swiper
+                &-container
+                    margin-top: -540px                  
+@media (max-width: 500px)  
+    .swiper
+        &-container
+            margin-top: 320px
+    .col-50
+        &:last-child 
+            .swiper
+                &-container
+                    margin-top: -500px                   
     .header
         padding: 20px 0
     .title
@@ -58,6 +180,15 @@
             margin-right: 0
             margin-bottom: 26px
 @media (max-width: 425px) 
+    .swiper
+        &-container
+            margin-top: 320px
+    .col-50
+        width: 100%
+        &:last-child 
+            .swiper
+                &-container
+                    margin-top: -530px
     .hero           
         &__bg
             height: 532px
@@ -75,6 +206,50 @@
     .contacts
         &__phone
             margin-right: 3px
+    .modal
+        &__close
+            width: 27px
+            height: 27px
+    .card
+        &__text
+            max-width: 270px
+            padding: 21px 31px 37px
+        &__title
+            font-size: 15px
+        &__item
+            font-size: 13px
+            line-height: 20px
+        &__pricetag
+            font-size: 15px
+            padding: 11px 10px
+            min-width: 190px
+            height: 40px
+    .design 
+        &--dark
+            background-color: $blackBg
+        &__heading,
+        &__description
+            color: $light
+        &__description
+            font-size: 15px
+            line-height: 22px
+        .card
+            &__pricetag
+                text-align: center
+                padding: 11px 10px
+                display: flex
+                align-items: center
+                justify-content: center
+@media (max-width: 390px)
+    .swiper
+        &-container
+            margin-top: 300px
+    .col-50
+        width: 100%
+        &:last-child 
+            .swiper
+                &-container
+                    margin-top: -500px     
 @media (max-width: 375px)     
     .hero
         .container
@@ -82,4 +257,51 @@
         &__content
             padding-top: 76px
         &__text
-            margin: 0 0 33px 3px      
+            margin: 0 0 33px 3px   
+    .modal
+        &__title
+            font-size: 16px 
+            line-height: normal
+            max-width: 270px
+        &__dialog
+            padding: 33px 20px 27px  
+    .swiper
+        &-container
+            margin-top: 274px
+        &-slide
+            padding-bottom: 25px
+            &__text
+                margin-bottom: 30px
+                flex-basis: 46%
+            &__title,
+            &__value
+                margin-left: 3px
+        &-button
+            &-prev
+                left: 20%
+                bottom: 2px
+            &-next
+                right: 20%
+                bottom: 2px
+    .col-50
+        &:last-child 
+            .swiper
+                &-container
+                    margin-top: -465px 
+@media (max-width: 350px)
+    .swiper
+        &-container
+            margin-top: 284px 
+        &-button
+            &-prev
+                left: 5%
+            &-next
+                right: 5%
+        &-slide
+            &__text
+                flex-basis: 50%
+    .col-50
+        &:last-child 
+            .swiper
+                &-container
+                    margin-top: -450px                  

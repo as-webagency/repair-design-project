@@ -1,0 +1,123 @@
+.projects
+    padding: 175px 0 355px
+    &__dark
+        position: relative
+        margin-top: -48.5px
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: url(../img/dark-lines.png) center/cover no-repeat
+    &__towns
+        position: relative
+        &::before,
+        &::after
+            content: ''
+            position: absolute
+            bottom: -355px
+            max-width: 637px
+            width: 100%
+            height: 559px
+        &::before
+            left: 0
+            background: url('../img/town-left.png') left no-repeat
+        &::after
+            right: 0
+            background: url('../img/town-right.png') right no-repeat
+        .col-50
+            margin-left: 20px
+    .section-title
+        &__heading
+            font-size: 27px
+            line-height: 37px
+            margin: 0 0 20px
+            letter-spacing: -0.07em
+            &--primary
+                color: $primary
+                text-align: left
+        &__description
+            max-width: 440px
+            font-size: 18px
+            line-height: 29px
+            &--left
+                text-align: left
+                margin: 0
+                color: $light
+        &__word
+            display: flex
+            align-items: center
+            &::after
+                content: ''
+                width: 92px
+                height: 1px
+                background-color: $primary
+                margin-left: 34px
+                margin-top: -2px
+.swiper
+    &-container
+        color: $light
+        margin-top: 47px
+        &-horizontal > 
+            .swiper-pagination-bullets
+                bottom: 0
+                width: auto
+                .swiper-pagination-bullet
+                    margin: 0 9px
+    &-slide
+        opacity: 0
+        display: flex
+        flex-wrap: wrap  
+        padding-bottom: 63px
+        &-active
+            opacity: 1
+        &__text
+            flex-basis: 34%
+            margin-bottom: 38px
+        &__title
+            font-family: 'Yeseva One', cursive
+            font-weight: normal
+            font-size: 18px     
+            color: $primary
+            text-transform: uppercase    
+            margin: 0 0 9px     
+        &__value
+            font-family: 'FuturaBookC', sans-serif
+            font-size: 15px
+            line-height: 20px
+            color: $light
+        &__image
+            max-width: 679px
+            height: 100%
+            max-height: 482px
+    &-pagination
+        &-bullet
+            background-color: rgba($light, .3) 
+            width: 10px
+            height: 10px
+            opacity: 1
+            &-active
+                background-color: $light  
+    &-button
+        &-prev,
+        &-next
+            top: auto
+            bottom: 0
+            width: 42px
+            height: 14px
+            &::after
+                display: none
+        &-prev
+            left: 0
+            background: url('../img/arrow-prev.svg') center no-repeat     
+        &-next
+            background: url('../img/arrow-next.svg') center no-repeat     
+    &-scrollbar
+        background-color: transparent
+.col-50
+    &:last-child
+        margin-left: -20px
+        .swiper-container
+            margin-top: 0        
