@@ -2,6 +2,20 @@
     .hero
         .container
             max-width: 1100px
+    .measurer
+        &__wrap
+            right: 0
+        &__image
+            margin-left: -130px
+        &__item
+            &:first-child
+                right: 110px
+            &:nth-child(2)
+                right: 260px
+            &:nth-child(3)
+                right: 190px
+            &:last-child
+                right: 180px
 @media (max-width: 1240px) 
     .col
         flex-basis: 31%
@@ -15,6 +29,18 @@
     .hero
         .container
             max-width: 1000px 
+    .measurer
+        &__image
+            margin-left: -330px
+        &__item
+            &:first-child
+                right: 320px
+            &:nth-child(2)
+                right: 470px
+            &:nth-child(3)
+                right: 390px
+            &:last-child
+                right: 390px
 @media (max-width: 1100px)   
     .header
         .container
@@ -24,7 +50,9 @@
     .hero
         .container
             max-width: 900px     
-@media (max-width: 992px)                      
+@media (max-width: 992px)  
+    .measurer
+        display: none                    
     .hero
         &__instagram
             display: none
