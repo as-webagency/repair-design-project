@@ -8706,12 +8706,28 @@ $(document).ready(function() {
   next.css('left', prev.width() + 20 + bullets.width() + 20);
   bullets.css('left', prev.width() + 20);
 
-    $(".scroll-dowm__link span").click(function(){
-      $("html, body").animate({
-        scrollTop: $("header").height()+ 850 
-      }, 1000);
-      return false;
+  $(".scroll-dowm__link span").click(function(){
+    $("html, body").animate({
+      scrollTop: $("header").height()+ 850 
+    }, 1000);
+    return false;
+  });
+
+  var player;
+  $('.video__play').on('click', function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '434',
+      width: '100%',
+      videoId: 'RHzzLqJWqHs',
+      events: {
+        'onReady': videoPlay
+      }
     });
+  });
+
+  function videoPlay(event) {
+    event.target.playVideo();
+  }
 
 });
 
