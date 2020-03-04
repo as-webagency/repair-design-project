@@ -8729,5 +8729,16 @@ $(document).ready(function() {
     event.target.playVideo();
   }
 
+  $('.fantasy-list__item').not('.fantasy-list__item-active').click(function (e) {
+    e.preventDefault();
+    var index = $(this).index();
+    var content = $('.fantasy-product__item').eq(index);
+    $(this).addClass('fantasy-list__item-active').siblings().removeClass('fantasy-list__item-active');
+    $('.fantasy-product__item').css('display', 'none').eq(index).css('display', 'block');
+  });
+
+  $('.fantasy-list__item:first').addClass('fantasy-list__item-active');
+  $('.fantasy-product__item:first').css('display', 'block');
+
 });
 
