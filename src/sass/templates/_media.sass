@@ -41,6 +41,12 @@
                 right: 390px
             &:last-child
                 right: 390px
+    .fantasy
+        &-product
+            &__image
+                max-width: 310px
+            &__left
+                margin: -298px 20px -40px 0
 @media (max-width: 1100px)   
     .header
         .container
@@ -49,8 +55,26 @@
         display: none   
     .hero
         .container
-            max-width: 900px     
+            max-width: 900px  
+    .fantasy
+        .section-title
+            &__heading
+                font-size: 22px
+                max-width: 330px
+        &-product
+            &__image
+                max-width: 300px   
 @media (max-width: 992px)  
+    .design
+        padding: 0
+    .lines
+        &__wrap
+            &::before
+                display: none
+    .projects
+        &__dark
+            &::before
+                display: none 
     .measurer
         display: none                    
     .hero
@@ -108,7 +132,29 @@
                     margin-top: -662px
     .control
         &__section-title
-            margin-top: -360px                    
+            margin-top: -360px 
+    .fantasy
+        padding: 0
+        background: none
+        &.section__relative
+            position: static
+        &::before
+            display: none
+        &-sides
+            display: none 
+        .section-title
+            &__heading
+                &--primary
+                    text-align: center
+                    margin: 0 auto 24px 
+        &-wrapper
+            overflow: visible
+            opacity: 1
+            width: auto
+            height: auto
+        .swiper
+            &-container
+                margin-top: 0                           
 @media (max-width: 900px)
     .swiper
         &-container
@@ -263,10 +309,6 @@
             margin-right: 0
             margin-bottom: 26px
 @media (max-width: 425px) 
-    .lines
-        &__wrap
-            &::before
-                display: none
     .control
         &__text
             font-size: 14px
@@ -319,7 +361,10 @@
             padding: 11px 10px
             min-width: 190px
             height: 40px
-    .design 
+    .design
+        padding: 200px 0 0
+        &__size
+            margin-top: -160px
         &--dark
             background-color: $blackBg
         &__heading,
@@ -346,8 +391,26 @@
                 &-container
                     margin-top: -500px     
 @media (max-width: 375px) 
+    .design
+        &__description
+            margin: 15px auto 33px
+        .section-title
+            &__description
+                max-width: 300px
+            &__image
+                &::before,
+                &::after
+                    margin: -1px 5px
+        &__card
+            margin-bottom: 85px
+        .card
+            &__text
+                margin: -146px 0 0 2px
+            &__pricetag
+                margin-left: 0
+                box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3)
     .types
-        padding: 83px 0
+        padding: 83px 0 0
         &__heading
             margin: 0 0 19px
         &__card
@@ -438,7 +501,28 @@
             .swiper
                 &-container
                     margin-top: -465px 
+    .design
+        padding: 172px 0 0
+        &__size
+            margin-top: -145px
+    .fantasy 
+        .section-title
+            &__heading
+                &--primary
+                    margin: 22px auto 24px
+@media (max-width: 365px)
+    .fantasy 
+        .section-title
+            &__heading
+                font-size: 20px
+                max-width: 300px
+                line-height: normal
 @media (max-width: 350px)
+    .fantasy 
+        .section-title
+            &__heading
+                font-size: 18px
+                max-width: 280px
     .swiper
         &-container
             margin-top: 284px 

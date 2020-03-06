@@ -8734,11 +8734,18 @@ $(document).ready(function() {
     var index = $(this).index();
     var content = $('.fantasy-product__item').eq(index);
     $(this).addClass('fantasy-list__item-active').siblings().removeClass('fantasy-list__item-active');
-    $('.fantasy-product__item').css('display', 'none').eq(index).css('display', 'block');
+    $('.fantasy-product__item').css('display', 'none').eq(index).css('display', 'flex');
   });
 
   $('.fantasy-list__item:first').addClass('fantasy-list__item-active');
-  $('.fantasy-product__item:first').css('display', 'block');
+  $('.fantasy-product__item:first').css('display', 'flex');
+
+  var swiper = new Swiper('.fantasy-slider', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
 
 });
 

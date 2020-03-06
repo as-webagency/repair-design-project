@@ -1,5 +1,5 @@
 .fantasy
-    padding: 137px 0 85px
+    padding: 137px 0 0
     background: $dark url('../img/fantasy/fantasy-bg.jpg') no-repeat
     &::before
         content: ''
@@ -10,7 +10,8 @@
         height: 100%
         background: rgba($black, .7)
     .container
-        position: relative 
+        position: relative
+        max-width: 1270px 
     .section-title
         &__heading
             font-size: 27px
@@ -19,18 +20,21 @@
             margin-bottom: 47px
             &--primary
                 text-align: left 
+    &-sides
+        justify-content: space-between
     &-list
         margin: 0
         padding: 0
         list-style-type: none
         &__sizes
-            max-width: 250px
+            max-width: 270px
         &__item
             font-family: 'FuturaMediumC', sans-serif
             font-weight: 500
             font-size: 20px
             color: $light
-            margin-bottom: 15px
+            margin: -4px 0 30.5px
+            letter-spacing: 1.8px
             transition: .4s
             position: relative
             cursor: pointer
@@ -61,3 +65,68 @@
     &-product
         &__item
             display: none
+        &__left
+            margin: -298px 43px -40px 0
+            .fantasy-product
+                &__image
+                    &:first-child
+                        img
+                            height: 554px
+                    &:last-child
+                        img
+                            height: 350px
+        &__right
+            margin-top: -370px
+            .fantasy-product
+                &__image
+                    &:first-child
+                        img
+                            height: 275px
+                    &:last-child
+                        img
+                            height: 625px
+        &__image
+            margin-bottom: 38px
+            max-width: 354px
+            width: 100%
+            &:last-child
+                margin-bottom: 0
+            img
+                display: block
+                width: 100%
+                height: 100%
+                object-fit: cover
+    &-slider
+        .swiper
+            &-button
+                &-next,  
+                &-prev 
+                    position: absolute
+                    top: 54%
+                    transform: translateY(-54%)
+                    width: 36px
+                    height: 36px  
+                    border-radius: 50%
+                    box-shadow: 0px 0px 15px rgba(227, 184, 115, 0.5)
+                &-next             
+                    background: $primary url('../img/fantasy/arrow-next.svg') center no-repeat
+                    left: auto !important
+                    right: 13px
+                &-prev
+                    background: $primary url('../img/fantasy/arrow-prev.svg') center no-repeat
+                    left: 13px
+            &-slide
+                &__image
+                    width: 100%
+                    max-width: 340px
+                    height: 100%
+                    max-height: 242px
+                    margin: 0 auto
+                    object-fit: cover
+    &-wrapper 
+        max-width: 340px
+        margin: 0 auto   
+        opacity: 0
+        width: 0
+        height: 0    
+        overflow: hidden            
