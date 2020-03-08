@@ -8687,7 +8687,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 $(document).ready(function() {
 
-  var mySwiper = new Swiper ('.swiper-container', {
+  var mySwiper = new Swiper ('.projects__towns .swiper-container', {
       loop: true,
       pagination: {
         el: '.swiper-pagination',
@@ -8697,6 +8697,9 @@ $(document).ready(function() {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+      autoplay: {
+        delay: 3000
+      }
   });
 
   var next = $('.swiper-button-next');
@@ -8745,7 +8748,41 @@ $(document).ready(function() {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    autoplay: {
+      delay: 2500
+    }
   });
 
-});
+  var stepSwiper = new Swiper ('.step .swiper-container', {
+    loop: true,
+    pagination: {
+      el: '.step .swiper-pagination',
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.step .swiper-button-next',
+      prevEl: '.step .swiper-button-prev',
+    },
+    autoplay: {
+      delay: 3500
+    }
+  });
 
+  var nextStep = $('.step .swiper-button-next');
+  var prevStep = $('.step .swiper-button-prev');
+  var bulletsStep = $('.step .swiper-pagination');
+
+  nextStep.css('left', prevStep.width() + 20 + bulletsStep.width() + 16, 
+  $('.step-block').on('click', (function() {
+    $('.step-block').removeClass('step-block--active'), 
+    $(this).addClass('step-block--active')
+    const e = $(this).data("index");
+        stepSwiper.slideTo(e)
+    })), stepSwiper.on("slideChange", (function() {
+        let e = stepSwiper.activeIndex - 1;
+        6 === e && (e = 0), $('.step-block').removeClass('step-block--active'), 
+        $('.step-block').eq(e).addClass('step-block--active')
+    })))
+  bulletsStep.css('left', prevStep.width() + 20);
+
+});

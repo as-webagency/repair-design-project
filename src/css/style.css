@@ -401,6 +401,14 @@ template {
   width: 50%;
 }
 
+.col-30 {
+  width: 30%;
+}
+
+.col-70 {
+  width: 70%;
+}
+
 .phone {
   font-family: 'FuturaDemiC', sans-serif;
   -webkit-transition: .4s;
@@ -523,6 +531,34 @@ template {
   color: #ffffff;
 }
 
+.section-title__word {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-title__word::after {
+  content: '';
+  width: 92px;
+  height: 1px;
+  background-color: #E3B873;
+  margin-left: 34px;
+  margin-top: -2px;
+}
+
+.section-title__overhead {
+  font-family: 'FuturaDemiC', sans-serif;
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 21px;
+  color: #ffffff;
+  display: block;
+  margin: -4px 0 17px;
+}
+
 .label {
   font-family: 'FuturaBookC', sans-serif;
   font-size: 15px;
@@ -608,6 +644,20 @@ template {
 
 .policy--light {
   color: #ffffff;
+}
+
+.lines__dark {
+  position: relative;
+}
+
+.lines__dark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/dark-line.png") center/cover no-repeat;
 }
 
 *,
@@ -1712,24 +1762,6 @@ button.swiper-pagination-bullet {
   color: #ffffff;
 }
 
-.projects .section-title__word {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.projects .section-title__word::after {
-  content: '';
-  width: 92px;
-  height: 1px;
-  background-color: #E3B873;
-  margin-left: 34px;
-  margin-top: -2px;
-}
-
 .swiper-container {
   color: #ffffff;
   margin-top: 47px;
@@ -2032,6 +2064,8 @@ button.swiper-pagination-bullet {
 
 .design__size {
   padding: 157px 0 0;
+  position: relative;
+  z-index: 3;
 }
 
 .design--dark {
@@ -2433,6 +2467,129 @@ button.swiper-pagination-bullet {
   overflow: hidden;
 }
 
+.step {
+  padding: 428px 0 438px;
+}
+
+.step .container {
+  max-width: 1270px;
+}
+
+.step__size {
+  margin-top: -480px;
+}
+
+.step .section-title__heading {
+  font-size: 27px;
+  line-height: 35px;
+}
+
+.step .section-title__heading--primary {
+  text-align: left;
+}
+
+.step .section-title__word::after {
+  margin-left: 88px;
+  margin-top: -1px;
+}
+
+.step .swiper-container {
+  margin-top: -110px;
+}
+
+.step .swiper-button-prev, .step .swiper-button-next {
+  bottom: 160px;
+}
+
+.step .swiper-pagination {
+  bottom: 160px;
+}
+
+.step .swiper-slide__text {
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+}
+
+.step .swiper-slide__title {
+  max-width: 250px;
+  margin: 0 0 16px;
+  letter-spacing: -0.5px;
+}
+
+.step .swiper-slide__description {
+  font-family: 'FuturaBookC', sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  margin: -3px 0 15px;
+  max-width: 330px;
+}
+
+.step .swiper-slide__count {
+  font-family: 'Yeseva One', cursive;
+  font-size: 18px;
+  line-height: 25px;
+  color: #ffffff;
+  margin: 7px 0 20px;
+}
+
+.step .swiper-slide__image {
+  margin-left: auto;
+  margin-top: 125px;
+  max-width: 765px;
+  width: 100%;
+  max-height: 378px;
+  height: 100%;
+}
+
+.step-block {
+  opacity: .5;
+  cursor: pointer;
+}
+
+.step-block__number {
+  color: #ffffff;
+  display: inline-block;
+  font-family: 'Yeseva One', cursive;
+  font-size: 15px;
+  line-height: 21px;
+  border-bottom: 1px solid #E3B873;
+  margin-bottom: 9px;
+}
+
+.step-block__text {
+  color: #ffffff;
+  font-family: 'FuturaBookC', sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  width: 130px;
+}
+
+.step-block__item {
+  width: 23%;
+  margin-bottom: 36px;
+  margin-left: 18px;
+}
+
+.step-block--active {
+  opacity: 1;
+}
+
+.step-blocks {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.row__step {
+  max-width: 785px;
+  width: 100%;
+  margin-top: -18px;
+  margin-left: auto;
+  position: relative;
+  z-index: 4;
+  overflow: hidden;
+}
+
 .modal {
   opacity: 0;
   visibility: hidden;
@@ -2620,6 +2777,12 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 1200px) {
+  .row__step {
+    max-width: 700px;
+  }
+  .step .swiper-slide__image {
+    max-width: 685px;
+  }
   .header .container {
     max-width: 1100px;
   }
@@ -2653,6 +2816,12 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 1100px) {
+  .row__step {
+    max-width: 620px;
+  }
+  .step .swiper-slide__image {
+    max-width: 605px;
+  }
   .header .container {
     max-width: 1000px;
   }
@@ -2672,6 +2841,9 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 992px) {
+  .step {
+    display: none;
+  }
   .design {
     padding: 0;
   }
