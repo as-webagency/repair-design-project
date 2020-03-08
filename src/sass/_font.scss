@@ -1,5 +1,6 @@
 @font-face {
     font-family: 'FuturaDemiC';
+    font-display: swap;
     src: url('../fonts/FuturaDemiC.eot');
     src: local('Futura Demi Cyrillic'), local('FuturaDemiC'),
         url('../fonts/FuturaDemiC.eot?#iefix') format('embedded-opentype'),
@@ -11,6 +12,7 @@
 }
 @font-face {
     font-family: 'FuturaBookC';
+    font-display: swap;
     src: url('../fonts/FuturaBookC.eot');
     src: url('FuturaBookC.eot?#iefix') format('embedded-opentype'),
         url('../fonts/FuturaBookC.woff2') format('woff2'),
@@ -21,6 +23,7 @@
 }
 @font-face {
     font-family: 'Yeseva One';
+    font-display: swap;
     src: url('../fonts/YesevaOne-Regular.eot');
     src: local('Yeseva One Regular'), local('YesevaOne-Regular'),
         url('../fonts/YesevaOne-Regular.eot?#iefix') format('embedded-opentype'),
@@ -32,6 +35,7 @@
 }
 @font-face {
     font-family: 'FuturaMediumC';
+    font-display: swap;
     src: url('../fonts/FuturaMediumC.eot');
     src: local('FuturaMediumC'),
         url('../fonts/FuturaMediumC.eot?#iefix') format('embedded-opentype'),
