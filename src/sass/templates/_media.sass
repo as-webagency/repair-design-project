@@ -20,6 +20,11 @@
     .col
         flex-basis: 31%
 @media (max-width: 1200px) 
+    .client
+        &-block
+            padding: 32px 20px 63px
+            &__item
+                max-width: 350px
     .row__step
         max-width: 700px
     .step 
@@ -55,6 +60,14 @@
             &__left
                 margin: -298px 20px -40px 0
 @media (max-width: 1100px)
+    .client
+        &-block
+            max-width: 356px
+            &__item
+                margin-bottom: 100px
+            &s
+                flex-direction: column
+                align-items: center
     .team
         .container
             max-width: 960px  
@@ -81,7 +94,38 @@
         &-product
             &__image
                 max-width: 300px   
-@media (max-width: 992px) 
+@media (max-width: 992px)
+    .footer
+        background: none
+        background-color: $dark
+        &::before
+            display: none
+        &__menu
+            display: none
+        &.section
+            padding: 0 0 65px
+        &__wrap
+            margin: 0 auto
+            max-width: 500px
+            left: 0
+            &::before
+                display: none
+        &-wrap
+            padding: 0
+        &__form
+            flex-direction: column
+        .policy
+            &__label
+                margin-left: 0
+                &--center
+                    justify-content: flex-start
+        &__button
+            max-width: 340px
+            width: 100%
+    .ymap-container
+        margin: 0 auto
+    .client
+        display: none 
     .team
         background-color: $dark 
         &__size
@@ -315,6 +359,30 @@
                 &-container
                     margin-top: -540px                  
 @media (max-width: 500px)  
+    .footer
+        &.section
+            padding: 0 0 200px
+        &__size
+            margin-top: -80px
+            position: relative
+            z-index: 5
+        .container
+            position: relative
+        &__center
+            position: absolute
+            bottom: -200px
+        &-text
+            font-size: 18px
+        &__text
+            max-width: 320px
+        &__center
+            left: 50%
+            transform: translateX(-50%)
+            width: 100%
+    #map-yandex
+        height: 320px
+    .ymap-container
+        margin: 45px auto 0            
     .swiper
         &-container
             margin-top: 320px
@@ -428,6 +496,32 @@
                 &-container
                     margin-top: -500px     
 @media (max-width: 375px) 
+    .footer
+        &.section
+            padding: 0 0 220px
+        &__size
+            margin: -110px auto 0
+        &__title
+            margin: 0 0 47px
+        &__wrap
+            max-width: 340px
+        &__group
+            flex-basis: 100%
+            margin-bottom: 62px
+            &:nth-child(3)
+                margin-bottom: 8px
+        &__button
+            margin: 68px auto 0
+        &__center
+            bottom: -219px
+        &-text
+            line-height: 24px
+        &-socials
+            &__link
+                width: 40px
+                height: 40px
+    #map-yandex
+        height: 256px
     .team
         &__size
             margin-top: -160px
@@ -568,6 +662,11 @@
                 max-width: 300px
                 line-height: normal
 @media (max-width: 350px)
+    .footer
+        &-text
+            font-size: 16px
+        &__text
+            max-width: 280px
     .fantasy 
         .section-title
             &__heading

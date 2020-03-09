@@ -28,7 +28,7 @@
         </div>
     </header>
     <main>
-        <section class="hero hero__bg">
+        <section class="hero hero__bg" id="main">
             <div class="instagram hero__instagram">
                 <a href="https://www.instagram.com/websites_by_alexander/" target="_blank" class="instagram__link">instagram</a>
             </div>
@@ -796,16 +796,139 @@
                     <p class="team__description">Каждый сотрудник нашей компании является квалифицированным штатным специалистом с опытом работы от 6 лет. У нас нет  гастарбайтеров, каждый сотрудник выполняет работу, соответствующую его специальности.</p>
                 </div>
             </section>
-            <section class="section client" id="reviews">
-                <div class="container"></div>
+            <section class="section section__relative client" id="reviews">
+                <div class="container">
+                    <div class="section-title">
+                        <h2 class="section-title__heading client__heading">Наши клиенты</h2>
+                        <div class="section-title__image">
+                            <img src="./img/client/client.svg" alt="client">
+                        </div>
+                        <p class="section-title__description client__description">80% наших клиентов рекомендуют нас своим знакомым и друзьям</p>
+                    </div>
+                    <div class="client-blocks flex">
+                        <div class="client-block client-block__item">
+                            <div class="client-block__top flex flex-center">
+                                <img src="./img/client/client1.png" alt="client1" class="client-block__image">
+                                <h3 class="client-block__name">Савельева Екатерина Львовна</h3>
+                            </div>
+                            <p class="client-block__text">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.</p>
+                            <div class="client-block__bottom flex flex-center">
+                                <div class="client-block__left flex flex-center">
+                                    <img src="./img/client/size.svg" alt="size">
+                                    <span>40 М<sub>2</sub></span>
+                                </div>
+                                <div class="client-block__right flex flex-center">
+                                    <img src="./img/client/book.svg" alt="book">
+                                    <span>48 дней</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="client-block client-block__item">
+                            <div class="client-block__top flex flex-center">
+                                <img src="./img/client/client2.png" alt="client2" class="client-block__image">
+                                <h3 class="client-block__name">Большов Михаил Анатольевич</h3>
+                            </div>
+                            <p class="client-block__text">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.</p>
+                            <div class="client-block__bottom flex flex-center">
+                                <div class="client-block__left flex flex-center">
+                                    <img src="./img/client/size.svg" alt="size">
+                                    <span>90 М<sub>2</sub></span>
+                                </div>
+                                <div class="client-block__right flex flex-center">
+                                    <img src="./img/client/book.svg" alt="book">
+                                    <span>128 дней</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="client-block client-block__item">
+                            <div class="client-block__top flex flex-center">
+                                <img src="./img/client/client3.png" alt="client3" class="client-block__image">
+                                <h3 class="client-block__name">Хасанов Даниил Муратович</h3>
+                            </div>
+                            <p class="client-block__text">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.</p>
+                            <div class="client-block__bottom flex flex-center">
+                                <div class="client-block__left flex flex-center">
+                                    <img src="./img/client/size.svg" alt="size">
+                                    <span>56 М<sub>2</sub></span>
+                                </div>
+                                <div class="client-block__right flex flex-center">
+                                    <img src="./img/client/book.svg" alt="book">
+                                    <span>86 дней</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </aside>
-        <section class="section contacts" id="contacts">
-            <div class="container"></div>
-        </section>
     </main>
-    <footer class="footer">
-        <div class="container"></div>
+    <footer class="footer footer__size section section__relative section--dark" id="contacts">
+        <div class="container">
+            <div class="footer-wrap footer__wrap">
+                <h3 class="footer__title">Остались вопросы?</h3>
+                <form action="#" class="form footer__form flex" method="post">
+                    <div class="footer__group flex">
+                        <label for="name" class="label footer__label label--light">Имя</label>
+                        <input type="text" name="user_name" id="name" class="input footer__input input--transparent" placeholder="Как вас зовут:">
+                    </div>
+                    <div class="footer__group flex">
+                        <label for="phone" class="label footer__label label--light">Телефон</label>
+                        <input type="tel" name="user_phone" id="phone" class="input footer__input input--transparent" placeholder="Ваш номер телефона:">
+                    </div>
+                    <div class="footer__group flex footer__group--full-width">
+                        <label for="question" class="label footer__label label--light">Вопрос</label>
+                        <input type="text" name="user_question" id="question" class="input footer__input input--transparent" placeholder="Я хочу спросить:">
+                    </div>
+                    <div class="policy footer__policy">
+                        <input type="checkbox" name="user_checkbox" id="policy-checkbox-footer" class="policy__checkbox" checked>
+                        <label for="policy-checkbox-footer" class="policy__label policy__label--center">Я соглашаюсь с обработкой данных</label>
+                    </div>
+                    <button class="button footer__button button--primary">Отправить</button>
+                </form>
+            </div>
+            <div class="footer__center">
+                <h4 class="footer-text footer__text footer-text--primary">Ростов на дону, Торговый центр Plaza
+                    Прямой телефон <a href="tel:+79997683299" class="footer-text__phone">+7 (999) 768 32 99</a>
+                </h4>
+                <div class="footer-socials footer__socials flex">
+                    <a href="#" class="footer-socials__link">
+                        <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.4 0.994141H13.6C14.37 0.994141 15 1.62414 15 2.39414V10.7941C15 11.5641 14.37 12.1941 13.6 12.1941H2.4C1.63 12.1941 1 11.5641 1 10.7941V2.39414C1 1.62414 1.63 0.994141 2.4 0.994141Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15 2.39453L8 7.29453L1 2.39453" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                            
+                    </a>
+                    <a href="#" class="footer-socials__link">
+                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 1.59375H4.00001C2.34316 1.59375 1.00001 2.9369 1.00001 4.59375V10.5938C1.00001 12.2506 2.34316 13.5938 4.00001 13.5938H10C11.6569 13.5938 13 12.2506 13 10.5938V4.59375C13 2.9369 11.6569 1.59375 10 1.59375Z" stroke="white" stroke-width="1.5"/>
+                            <path d="M9.40003 7.21593C9.47408 7.71528 9.38879 8.22526 9.15629 8.67334C8.92379 9.12142 8.55592 9.48478 8.10501 9.71173C7.6541 9.93869 7.1431 10.0177 6.6447 9.93749C6.14631 9.85729 5.68589 9.62198 5.32894 9.26503C4.97198 8.90807 4.73667 8.44766 4.65647 7.94926C4.57627 7.45086 4.65527 6.93987 4.88223 6.48896C5.10919 6.03804 5.47254 5.67018 5.92062 5.43768C6.3687 5.20518 6.87869 5.11988 7.37803 5.19393C7.88739 5.26946 8.35894 5.50681 8.72305 5.87091C9.08715 6.23502 9.3245 6.70658 9.40003 7.21593Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                            
+                    </a>
+                </div>
+            </div>
+            <div class="ymap-container map footer__map" id="map">
+                <div class="loader loader-default"></div>
+                <div id="map-yandex"></div>
+            </div>
+        </div>
+        <div class="footer__menu">
+            <div class="container">
+                <div class="menu menu__content flex-center">
+                    <a href="index.html" class="logo menu__logo logo--primary">Repair Design Project</a>
+                    <nav class="nav menu__nav">
+                        <a href="#main" class="nav__item">Главная</a>
+                        <a href="#projects" class="nav__item">Проекты</a>
+                        <a href="#measurement" class="nav__item">Замер</a>
+                        <a href="#team" class="nav__item">Команда</a>
+                        <a href="#reviews" class="nav__item">Отзывы</a>
+                        <a href="#contacts" class="nav__item">Контакты</a>
+                    </nav>
+                    <div class="contacts menu__contacts">
+                        <a href="tel:+79997683299" class="phone contacts__phone phone--primary">+7 (999) 768-32-99</a>
+                        <button class="button contacts__button button--primary" data-toggle="modal">Заказать звонок</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <div class="modal">
