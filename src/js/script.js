@@ -8908,10 +8908,5 @@ $(document).ready(function() {
   });
 
   new WOW().init();
-// $(window).width(function () {
-//   $(window).width() < 800 && ($(".wow").removeClass("wow"), 
-//   $(".fadeInUp").removeClass("fadeInUp"))
-// });
-
 
 });
