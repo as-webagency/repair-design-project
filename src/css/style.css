@@ -608,18 +608,22 @@ template {
 
 .input--dark::-webkit-input-placeholder {
   color: #363636;
+  opacity: 1;
 }
 
 .input--dark:-ms-input-placeholder {
   color: #363636;
+  opacity: 1;
 }
 
 .input--dark::-ms-input-placeholder {
   color: #363636;
+  opacity: 1;
 }
 
 .input--dark::placeholder {
   color: #363636;
+  opacity: 1;
 }
 
 .input--transparent {
@@ -5453,6 +5457,7 @@ button.swiper-pagination-bullet {
 
 .measurer {
   padding: 65px 0 243px;
+  overflow: hidden;
 }
 
 .measurer__out {
