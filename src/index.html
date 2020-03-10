@@ -156,7 +156,7 @@
                         </div>
                     </div>
                     <div class="control__video video wow flipInX" id="player" data-wow-delay="1s">
-                        <script src="https://www.youtube.com/iframe_api"></script>
+                        <script src="https://www.youtube.com/iframe_api" async></script>
                         <img src="./img/play.svg" alt="play" class="video__play">
                     </div>
                     <p class="control__text">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
@@ -937,22 +937,22 @@
             <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
             <form action="#" class="form modal__form" method="post">
                 <div class="modal__group flex">
-                    <label for="name" class="label modal__label label--light">Имя</label>
-                    <input type="text" name="user_name" id="name" class="input modal__input input--light" placeholder="Как вас зовут:">
+                    <label for="modal-name" class="label modal__label label--light">Имя</label>
+                    <input type="text" name="user_name" id="modal-name" class="input modal__input input--light" placeholder="Как вас зовут:">
                 </div>
                 <div class="modal__group flex">
-                    <label for="phone" class="label modal__label label--light">Телефон</label>
-                    <input type="tel" name="user_phone" id="phone" class="input modal__input input--light" placeholder="Ваш номер телефона:">
+                    <label for="modal-phone" class="label modal__label label--light">Телефон</label>
+                    <input type="tel" name="user_phone" id="modal-phone" class="input modal__input input--light" placeholder="Ваш номер телефона:">
                 </div>
                 <div class="modal__group flex">
-                    <label for="email" class="label modal__label label--light">Email</label>
-                    <input type="email" name="user_email" id="email" class="input modal__input input--light" placeholder="Ваш email:">
+                    <label for="modal-email" class="label modal__label label--light">Email</label>
+                    <input type="email" name="user_email" id="modal-email" class="input modal__input input--light" placeholder="Ваш email:">
                 </div>
                 <div class="policy modal__policy">
                     <input type="checkbox" name="user_checkbox" id="policy-checkbox-modal" class="policy__checkbox" checked>
                     <label for="policy-checkbox-modal" class="policy__label">Я соглашаюсь с обработкой данных</label>
                 </div>
-                <button class="button modal__button button--primary">Отправить заявку</button>
+                <button class="button modal__button button--primary" type="submit">Отправить заявку</button>
             </form>
         </div>
     </div>
