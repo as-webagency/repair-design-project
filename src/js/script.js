@@ -52,7 +52,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
         const modal = document.querySelector('.modal'),
             modalButton = document.querySelectorAll('[data-toggle=modal]'),
-            closeButton = document.querySelector('.modal__close');
+            closeButton = document.querySelector('.modal__close'),
+            modalThanks = document.querySelector('.modal-thanks');
 
         const switchModal = () => {
             modal.classList.toggle('modal--visible');
@@ -69,6 +70,16 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
             if (target.closest('.modal')) {
                 target.classList.remove('modal--visible');
+            } else {
+                return;
+            }
+        });
+
+        modalThanks.addEventListener('click', (event) => {
+            let target = event.target;
+
+            if (target.closest('.modal-thanks')) {
+                target.classList.remove('modal-thanks--visible');
             } else {
                 return;
             }
@@ -335,7 +346,15 @@ $(document).ready(function() {
           url: "send.php",
           data: $(form).serialize(),
           success: function (response) {
-            console.log('AJAX')
+            $(form)[0].reset();
+            $('.modal').removeClass('modal--visible');
+            $('.modal-thanks').addClass('modal-thanks--visible');
+            $('.modal-thanks__close').click(function (){
+              $('.modal-thanks').removeClass('modal-thanks--visible');
+            });
+          },
+          error: function (response) {
+            console.error('Что-то пошло не так. Ошибка' + response);
           }
         });
       }
@@ -349,3 +368,5 @@ $(document).ready(function() {
   $('[type=tel]').mask('+7(000) 00-00-00', {placeholder: 'Ваш номер телефона:'});
 
 });
+
+

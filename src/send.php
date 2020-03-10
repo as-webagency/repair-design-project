@@ -5,6 +5,7 @@ $userPhone = $_POST['user_phone'];
 $userEmail = $_POST['user_email'];
 $userQuestion = $_POST['user_question'];
 
+
 // Load Composer's autoloader
 require 'phpmailer/Exception.php';
 require 'phpmailer/PHPMailer.php';
@@ -26,7 +27,7 @@ try {
     $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
     //Recipients
-    $mail->setFrom('semenovaleksandr407@gmail.com', 'Mailer');
+    $mail->setFrom('semenovaleksandr407@gmail.com', 'Repair Design Project');
     $mail->addAddress('sniper.semenov@ukr.net', 'Joe User');     // Add a recipient
 
     // Content
@@ -39,7 +40,7 @@ try {
         Вопрос: ' . $userQuestion . '
     ';
 
-    if ($mail->send();) {
+    if ($mail->send()) {
         echo "ok";
     } else {
         echo "Письмо не отправлено. Код ошибки: {$mail->ErrorInfo}";
