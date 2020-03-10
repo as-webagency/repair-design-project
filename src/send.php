@@ -12,6 +12,7 @@ require 'phpmailer/SMTP.php';
 
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer\PHPMailer\PHPMailer();
+$mail->CharSet = 'utf-8';
 
 try {
     //Server settings
@@ -20,7 +21,7 @@ try {
     $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'semenovaleksandr407@gmail.com';                     // SMTP username
-    $mail->Password   = '05101992rko';                               // SMTP password
+    $mail->Password   = '242175rko';                               // SMTP password
     $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
@@ -32,15 +33,19 @@ try {
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Новая заявка с сайта - "Турецкий ремонт в Ростове-на-Дону"';
     $mail->Body    = '
-        Имя: ${userName}
-        Телефон: ${userPhone}
-        Email: ${userEmail}
-        Вопрос: ${userQuestion}
+        Имя: ' . $userName . '<br> 
+        Телефон: ' . $userPhone . '<br> 
+        Email: ' . $userEmail . '<br> 
+        Вопрос: ' . $userQuestion . '
     ';
 
-    $mail->send();
-    //echo 'Письмо отправлено';
-    header('Location: thanks.html');
+    if ($mail->send();) {
+        echo "ok";
+    } else {
+        echo "Письмо не отправлено. Код ошибки: {$mail->ErrorInfo}";
+    }
+    
+    //header('Location: thanks.html');
 } catch (Exception $e) {
     echo "Письмо не отправлено. Код ошибки: {$mail->ErrorInfo}";
 }

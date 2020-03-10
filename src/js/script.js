@@ -302,6 +302,13 @@ $(document).ready(function() {
   function formValidate(forms) {
     $(forms).validate({
       errorElement: "div",
+      errorPlacement: function(even, types) {
+        if ("checkbox" == types.attr("type")) {
+          return types.next("label").append(even); 
+        } else {
+          even.insertAfter($(types))
+        }
+      },
       rules: {
         user_name: "required",
         user_phone: "required",
@@ -309,7 +316,8 @@ $(document).ready(function() {
           required: true,
           email: true
         },
-        user_question: "required"
+        user_question: "required",
+        user_checkbox: "required"
       },
       messages: {
         user_name: "Введите имя",
@@ -318,7 +326,18 @@ $(document).ready(function() {
           required: "Введите email",
           email: "Введите в формате - name@domain.com"
         },
-        user_question: "Введите вопрос"
+        user_question: "Введите вопрос",
+        user_checkbox: "Подтвердите соглашение"
+      },
+      submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(),
+          success: function (response) {
+            console.log('AJAX')
+          }
+        });
       }
     });
   }

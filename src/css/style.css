@@ -744,6 +744,19 @@ template {
   bottom: -20px;
 }
 
+#user_checkbox-error {
+  font-family: 'FuturaBookC', sans-serif;
+  font-size: 15px;
+  color: tomato;
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+}
+
+.footer__policy #user_checkbox-error {
+  left: 120px;
+}
+
 *,
 *::before,
 *::after {
@@ -5326,8 +5339,10 @@ button.swiper-pagination-bullet {
 .control__policy {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  margin-top: 22px;
-  margin-left: -32px;
+  margin: 22px auto 0;
+  position: relative;
+  left: -32px;
+  max-width: 262px;
 }
 
 .control__policy .policy__label {
@@ -6319,6 +6334,7 @@ button.swiper-pagination-bullet {
 }
 
 .footer__policy {
+  position: relative;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
 }
@@ -6617,6 +6633,7 @@ button.swiper-pagination-bullet {
 
 .modal__policy {
   margin-bottom: 38px;
+  position: relative;
 }
 
 .modal__button {
@@ -6783,6 +6800,9 @@ button.swiper-pagination-bullet {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .footer__policy #user_checkbox-error {
+    left: 0;
   }
   .footer .policy__label {
     margin-left: 0;
@@ -7029,10 +7049,10 @@ button.swiper-pagination-bullet {
   }
   .control__policy {
     margin-top: 0;
-    margin-left: 0;
     margin-bottom: 62px;
     max-width: 600px;
     width: 100%;
+    left: 0;
   }
   .control__policy .policy__label {
     color: #ffffff;
